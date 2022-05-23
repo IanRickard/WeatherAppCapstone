@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import WeatherLocation from './WeatherLocation';
+import WeatherPlanner from './WeatherPlanner';
+import Header from './Header';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <main>
+        <h1>Welcome to weather app!</h1>
+        <Header />
+          <Routes>
+            <Route path='/weatherlocation' element={<WeatherLocation />} />
+            <Route path='/weatherplanner' element={<WeatherPlanner />} />
+          </Routes>
+      </main>
+    </Router>
   );
 }
 
