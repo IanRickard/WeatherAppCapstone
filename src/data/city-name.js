@@ -29,7 +29,7 @@ export const CityName = () =>{
       .then((data) => {
         const temperature = Math.trunc(data.main.temp) - 273;
         const description = data.weather[0].description;
-        let searchResult = `<p>temperature <b>${temperature} °C</b><br>${description}</p>`;
+        let searchResult = `<p>You selected ${loc}. </p> <p>temperature <b>${temperature} °C</b><br>${description}</p>`;
         document.getElementById("searchResult").innerHTML=searchResult;
       })
       .catch((err) => console.log(err));
@@ -44,9 +44,9 @@ export const CityName = () =>{
 
   return(
     <div>
-      <h2>Choose the city you're interested in!</h2>
+      <h2>Choose the city you're interested in! Click to see current weather :)</h2>
       <ul>{cityList}</ul>
-      <p id="searchResult"></p>
+      <h3 id="searchResult"></h3>
     </div>
   )
 
