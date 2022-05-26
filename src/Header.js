@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 export default function Header() {
   return(
     <div className="header">
+      <NavLink to="/">Home</NavLink>
+      <br></br>
       <NavLink to="/weatherlocation">Location</NavLink>
       <br></br>
       <NavLink to="/weatherplanner">Planner</NavLink>

@@ -4,6 +4,8 @@ import { Activity } from "./Activity";
 import generateId from "./utility";
 
 export default function WeatherPlanner(){
+  const [weatherinfo,setWeatherinfo]=useState([]);
+
   const handleClick = (e) =>{
     
     const apiKey=`5d08d180c3412d7f84b0178e59c9d5e8`;
@@ -14,15 +16,15 @@ export default function WeatherPlanner(){
     fetch(stringPassIn)
     .then((res) => res.json())
     .then((data) => {
-      const temperature = Math.trunc(data.list[0].main.temp) - 273;
-      console.log(temperature);
-      const description = data.list[0].weather[0].description;
-      let searchResult = `<p>You selected ${loc}. </p> <p>temperature <b>${temperature} °C</b><br>${description}</p>`;
-      document.getElementById("searchResult").innerHTML=searchResult;
+      const result=data.list.slice(0,8);
+      console.log(result);
+      setWeatherinfo(result);
+      console.log(weatherinfo);
     })
     .catch((err) => console.log(err));
     e.preventDefault();
   } 
+
 
   const [activities, setActivities] = useState([
     {
@@ -41,12 +43,6 @@ export default function WeatherPlanner(){
     );
   };
 
-  // Input the name of city you prefer
-  // If error, request to enter a valid city name
-  // On submit, generate weather forecast for 1day or 7 days
-  // Input area for user to add to-do-list of activities planned according to weather
-
-
   return (
     <main>
       <h2>
@@ -59,8 +55,27 @@ export default function WeatherPlanner(){
       </div>
       <input type="text" id="user-city" />
       <button onClick={handleClick}>Submit</button>
-      <p id="searchResult"></p>
       <br></br>
+      <div id="table">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Temperature</th>
+              <th>Feels like</th>
+              <th>Weather</th>
+            </tr>
+          </thead>
+          <tbody>{weatherinfo.map((item)=>(
+            <tr key={item.dt}>
+              <td>{item.dt_txt}</td>
+              <td>{(item.main.temp-273.15).toFixed(2)}°C</td>
+              <td>{(item.main.feels_like-273.15).toFixed(2)}°C</td>
+              <td>{item.weather[0].description}</td>
+            </tr>
+          ))}</tbody>
+        </table>
+      </div>
       <div id="planner">
         <AddActivityForm addActivity={addActivity} />
           <ul className="activities">
