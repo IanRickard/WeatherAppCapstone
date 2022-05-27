@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 
 export function Activity(props) {
   const { activity, removeActivity } = props;

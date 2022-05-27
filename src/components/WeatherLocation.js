@@ -1,5 +1,5 @@
 import React from "react";
-import { CityName } from "./data/city-name";
+import { CityName } from "./city-name";
 
 export default function WeatherLocation(){
 

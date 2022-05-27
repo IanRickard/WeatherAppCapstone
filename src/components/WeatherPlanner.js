@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { AddActivityForm } from "./AddActivityForm";
 import { Activity } from "./Activity";
-import generateId from "./utility";
+import generateId from "../data/utility";
 
 export default function WeatherPlanner(){
   const [weatherinfo,setWeatherinfo]=useState([]);

@@ -1,5 +1,5 @@
 import React from "react";
-import { worldCities } from "./city-list";
+import { worldCities } from "../data/city-list";
 
 export const CityName = () =>{
 
