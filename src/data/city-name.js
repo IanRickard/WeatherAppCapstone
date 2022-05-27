@@ -19,7 +19,7 @@ export const CityName = () =>{
 
   const handleClick = (e) =>{
     
-      const apiKey=`5d08d180c3412d7f84b0178e59c9d5e8`;
+      const apiKey=process.env.REACT_APP_WEATHERAPP_API_KEY;
       const loc=e.target.id;
       const stringPassIn = `http://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${apiKey}`;
       fetch(stringPassIn)
@@ -43,7 +43,7 @@ export const CityName = () =>{
     <div>
       <h2>Choose the city you're interested in! Click to see current weather :)</h2>
       <ul>{cityList}</ul>
-      <h3 id="searchResult"></h3>
+      <p id="searchResult"></p>
     </div>
   )
 
