@@ -85,6 +85,7 @@ h1{
   background-color: rgba(255, 255, 255, 0.796);
   color: rgb(13, 58, 121);
   /* margin: 0.5rem; */
+  padding-top: 0.4rem;
   padding-bottom: 1rem;
   /* border-radius: 0.3rem; */
 }
@@ -100,16 +101,20 @@ h1{
   padding-top: 0.2rem;
 }
 
+a{
+  font-weight: bold;
+}
+
 a:link {
   color: rgb(17, 7, 196);
   background-color: transparent;
-  text-decoration: none;
+  text-decoration: solid;
 }
 
 a:visited {
   color: rgba(106, 26, 10, 0.971);
   background-color: transparent;
-  text-decoration: none;
+  text-decoration: solid;
 }
 
 a:hover {
@@ -151,6 +156,16 @@ a:active {
 
 @media only screen and (min-width: 481px) {
 
+  body{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .description{
+    padding: 0.5rem;
+    margin: 1rem;
+  }
 }
 
 @media only screen and (min-width: 769px) {
