@@ -44,7 +44,7 @@ export default function WeatherPlanner(){
   };
 
   return (
-    <main>
+    <main className="description">
       <h2>
         Plan your day according to weather!
       </h2>
@@ -54,7 +54,7 @@ export default function WeatherPlanner(){
         </p>
       </div>
       <input type="text" id="user-city" />
-      <button onClick={handleClick}>Submit</button>
+      <button className="button1" onClick={handleClick}>Submit</button>
       <br></br>
       <div id="table">
         <table>

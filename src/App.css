@@ -78,3 +78,85 @@
     transform: rotate(360deg);
   }
 }
+
+h1{
+  text-align: center;
+  /* background-color: rgba(102, 102, 102, 0.167); */
+  background-color: rgba(255, 255, 255, 0.796);
+  color: rgb(13, 58, 121);
+  /* margin: 0.5rem; */
+  padding-bottom: 1rem;
+  /* border-radius: 0.3rem; */
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #5098f6;
+  /* background-color: rgba(102, 102, 102, 0.121); */
+  /* margin: 0.5rem; */
+  /* border-radius: 0.3rem; */
+  height: 1.6rem;
+  padding-top: 0.2rem;
+}
+
+a:link {
+  color: rgb(17, 7, 196);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgba(106, 26, 10, 0.971);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a2b1b6;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #5b696d;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.description{
+  text-align: center;
+  background-color: rgba(102, 102, 102, 0.234);
+  color: rgb(8, 37, 78);
+  margin: 0.5rem;
+  padding-bottom: 1rem;
+  border-radius: 0.3rem;
+}
+
+.button1 {
+  background-color: whitesmoke;
+  color: black;
+  font-size: 0.7rem;
+  border: 1px groove black;
+  border-radius: 0.2rem;
+  padding: 0.15rem;
+  margin-left: 0.5rem;
+  transition-duration: 0.4s;
+}
+
+.button1:hover {
+  background-color: #5b696d;
+}
+
+
+@media only screen and (min-width: 481px) {
+
+}
+
+@media only screen and (min-width: 769px) {
+
+  body{
+    max-width: 1024px;
+  }
+
+}
