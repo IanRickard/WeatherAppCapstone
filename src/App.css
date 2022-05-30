@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Atwic';
+  src: local('Atwic Medium'), local('Atwic-Medium'),
+      url('/Atwic-Medium/Atwic-Medium.woff2') format('woff2'),
+      url('/Atwic-Medium/Atwic-Medium.woff') format('woff'),
+      url('/Atwic-Medium/Atwic-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
 }
@@ -81,39 +91,35 @@
 
 h1{
   text-align: center;
-  /* background-color: rgba(102, 102, 102, 0.167); */
-  background-color: rgba(255, 255, 255, 0.796);
-  color: rgb(13, 58, 121);
-  /* margin: 0.5rem; */
-  padding-top: 0.4rem;
-  padding-bottom: 1rem;
-  /* border-radius: 0.3rem; */
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding-top: 0.3rem;
+  padding-bottom: 0.5rem;
 }
 
 .header {
   display: flex;
   justify-content: space-around;
   background-color: #5098f6;
-  /* background-color: rgba(102, 102, 102, 0.121); */
-  /* margin: 0.5rem; */
-  /* border-radius: 0.3rem; */
   height: 1.6rem;
-  padding-top: 0.2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 2.2rem;
   width: auto;
 }
 
 a{
   font-weight: bold;
+  color: white;
 }
 
 a:link {
-  color: rgb(17, 7, 196);
+  color: white;
   background-color: transparent;
   text-decoration: solid;
 }
 
 a:visited {
-  color: rgba(106, 26, 10, 0.971);
+  color: white;
   background-color: transparent;
   text-decoration: solid;
 }
@@ -121,7 +127,6 @@ a:visited {
 a:hover {
   color: #a2b1b6;
   background-color: transparent;
-  text-decoration: underline;
 }
 
 a:active {
@@ -133,7 +138,7 @@ a:active {
 .description{
   text-align: center;
   background-color: rgba(102, 102, 102, 0.234);
-  color: rgb(8, 37, 78);
+  color: white;
   margin: 0.5rem;
   padding-bottom: 1rem;
   border-radius: 0.3rem;
@@ -165,14 +170,22 @@ a:active {
 
   .description{
     padding: 0.5rem;
-    margin: 1rem;
+    margin: 1rem 2rem 1rem 2rem;
+
   }
 }
 
 @media only screen and (min-width: 769px) {
 
-  body{
-    max-width: 1024px;
+  .header{
+    justify-content: space-around;
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+
+  .description{
+    margin-left: 17%;
+    margin-right: 17%;
   }
 
 }

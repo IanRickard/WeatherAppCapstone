@@ -5,10 +5,10 @@
 }
 body {
   margin: auto;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: Atwic, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  background-image: url("/img/backgroundFullSize.jpg");
+  background-image: url("/img/try.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
