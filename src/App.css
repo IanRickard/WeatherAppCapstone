@@ -82,10 +82,11 @@
 
 ul {
   list-style: none;
+  color: darkslategray;
 }
 
-.useState .text {
-  color: grey;
+ul:hover {
+  cursor: pointer;
 }
 
 @keyframes App-logo-spin {
