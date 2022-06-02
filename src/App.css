@@ -80,6 +80,14 @@
   background-color: #000;
 }
 
+ul {
+  list-style: none;
+}
+
+.useState .text {
+  color: grey;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

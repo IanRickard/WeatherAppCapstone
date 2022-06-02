@@ -17,9 +17,7 @@ export default function WeatherPlanner(){
     .then((res) => res.json())
     .then((data) => {
       const result=data.list.slice(0,8);
-      console.log(result);
       setWeatherinfo(result);
-      console.log(weatherinfo);
     })
     .catch((err) => console.log(err));
     e.preventDefault();
