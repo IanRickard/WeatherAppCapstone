@@ -39,7 +39,7 @@ export default function WeatherLocation(){
     );});
 
   return (
-    <div>
+    <div className="description">
       <h2>
         Click on any location to check the weather!
       </h2>

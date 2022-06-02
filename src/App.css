@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Atwic';
+  src: local('Atwic Medium'), local('Atwic-Medium'),
+      url('/Atwic-Medium/Atwic-Medium.woff2') format('woff2'),
+      url('/Atwic-Medium/Atwic-Medium.woff') format('woff'),
+      url('/Atwic-Medium/Atwic-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
 }
@@ -85,4 +95,105 @@ ul {
   to {
     transform: rotate(360deg);
   }
+}
+
+h1{
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding-top: 0.3rem;
+  padding-bottom: 0.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #5098f6;
+  height: 1.6rem;
+  padding-top: 0.8rem;
+  padding-bottom: 2.2rem;
+  width: auto;
+}
+
+a{
+  font-weight: bold;
+  color: white;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: solid;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: solid;
+}
+
+a:hover {
+  color: #a2b1b6;
+  background-color: transparent;
+}
+
+a:active {
+  color: #5b696d;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.description{
+  text-align: center;
+  background-color: rgba(102, 102, 102, 0.234);
+  color: white;
+  margin: 0.5rem;
+  padding-bottom: 1rem;
+  border-radius: 0.3rem;
+}
+
+.button1 {
+  background-color: whitesmoke;
+  color: black;
+  font-size: 0.7rem;
+  border: 1px groove black;
+  border-radius: 0.2rem;
+  padding: 0.15rem;
+  margin-left: 0.5rem;
+  transition-duration: 0.4s;
+}
+
+.button1:hover {
+  background-color: #5b696d;
+}
+
+
+@media only screen and (min-width: 481px) {
+
+  body{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .description{
+    padding: 0.5rem;
+    margin: 1rem 2rem 1rem 2rem;
+
+  }
+}
+
+@media only screen and (min-width: 769px) {
+
+  .header{
+    justify-content: space-around;
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+
+  .description{
+    margin-left: 17%;
+    margin-right: 17%;
+  }
+
 }

@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <main>
-        <h1>Welcome to our Weather App!</h1>
+        <h1>Weather App</h1>
         <Header />
           <Routes>
             <Route path='/' element={<Home />} />
