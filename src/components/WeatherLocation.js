@@ -20,7 +20,7 @@ export default function WeatherLocation(){
     
       const apiKey=process.env.REACT_APP_WEATHERAPP_API_KEY;
       const loc=e.target.id;
-      const stringPassIn = `http://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${apiKey}`;
+      const stringPassIn = `https://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${apiKey}`;
       fetch(stringPassIn)
       .then((res) => res.json())
       .then((data) => {

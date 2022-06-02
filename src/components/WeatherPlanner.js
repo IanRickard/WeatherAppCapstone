@@ -11,7 +11,7 @@ export default function WeatherPlanner(){
     const apiKey=process.env.REACT_APP_WEATHERAPP_API_KEY;
     const loc=document.getElementById("user-city").value;
     console.log(loc);
-    const stringPassIn = `http://api.openweathermap.org/data/2.5/forecast?q=${loc}&appid=${apiKey}`;
+    const stringPassIn = `https://api.openweathermap.org/data/2.5/forecast?q=${loc}&appid=${apiKey}`;
     console.log(stringPassIn);
     fetch(stringPassIn)
     .then((res) => res.json())
